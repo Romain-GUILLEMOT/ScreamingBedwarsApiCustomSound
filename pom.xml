@@ -56,6 +56,10 @@
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
         <repository>
+            <id>screaming-repo</id>
+            <url>https://repo.screamingsandals.org/public/</url>
+        </repository>
+        <repository>
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
@@ -66,6 +70,12 @@
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.20.6-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.screamingsandals.bedwars</groupId>
+            <artifactId>BedWars-API</artifactId>
+            <version>0.2.36.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

@@ -1,4 +1,10 @@
 name: ScreamingBedWarsApiCustomSound
 version: '1.0'
-main: fr.yotapaki.screamingBedWarsApiCustomSound.ScreamingBedWarsApiCustomSound
+main: fr.yotapaki.screamingBedWarsApiCustomSound.Main
 api-version: '1.20'
+commands:
+  bwcs:
+    description: "Commands for Bedwars Custom Sounds."
+    aliases: [becs, bedwarscustomsounds]
+    usage: "/<command> help"
+    permission: "bedwarscustomsounds.use"
