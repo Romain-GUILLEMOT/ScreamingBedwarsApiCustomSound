@@ -24,7 +24,7 @@ public class EventManager implements Listener {
     @EventHandler
     public void onPlayerKilled(BedwarsPlayerKilledEvent event) {
         String message;
-        if (event.getKiller() != null && event.getKiller().getName() != null) {
+        if (event.getKiller() != null) {
             message = ChatColor.RED + "[BW Custom Sounds] " + ChatColor.YELLOW +
                     "Player " + ChatColor.AQUA + event.getPlayer().getName() +
                     ChatColor.YELLOW + " was killed by " + ChatColor.AQUA + event.getKiller().getName() + ".";
@@ -57,6 +57,7 @@ public class EventManager implements Listener {
             message = ChatColor.RED + "[BW Custom Sounds] " + ChatColor.YELLOW +
                     "Team " + ChatColor.AQUA + event.getGame().getTeamOfPlayer(event.getPlayer()).getName() +
                     ChatColor.YELLOW + " is dead.";
+            plugin.broadcastDebugMessage(message);
             return;
         }
 
@@ -68,7 +69,6 @@ public class EventManager implements Listener {
             }
 
 
-            // Arrêter si le joueur n'est plus en ligne
             if (!event.getPlayer().isOnline()) {
                 Bukkit.getScheduler().cancelTask(task.getTaskId());
                 return;
