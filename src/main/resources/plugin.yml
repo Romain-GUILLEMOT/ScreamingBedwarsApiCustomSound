@@ -1,0 +1,4 @@
+name: ScreamingBedWarsApiCustomSound
+version: '1.0'
+main: fr.yotapaki.screamingBedWarsApiCustomSound.ScreamingBedWarsApiCustomSound
+api-version: '1.20'
